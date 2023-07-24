@@ -1,0 +1,22 @@
+body {
+  overflow-y: scroll;
+}
+
+.site-wrap {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3rem;
+  min-height: 100vh;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  padding: 0 var(--site-gutter);
+  max-width: var(--site-max-width);
+  width: 100%;
+}
+
+.justify-center {
+  justify-content: center;
+}

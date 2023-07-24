@@ -1,0 +1,18 @@
+:root {
+  --color-primary: #005ce5;
+  --color-secondary: #f19365;
+  --color-tertiary: #faf9f8;
+  --color-quaternary: #f4eddd;
+  --color-quinary: #c3e7d9;
+  --color-semantic-warn: #ff9831;
+  --color-semantic-error: #d6001c;
+  --color-semantic-success: #00853d;
+  --color-grey-100: #faf9f8;
+  --color-grey-300: #e6e6e6;
+  --color-grey-400: #d0d0d0;
+  --color-grey-500: #c6c6c6;
+  --color-grey-600: #707070;
+  --color-grey-900: #222222;
+  --color-font: #222222;
+  --color-font-light: #707070;
+}

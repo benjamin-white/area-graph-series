@@ -1,0 +1,10 @@
+:root {
+  --font-family-headline: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family-body: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 600;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --line-height: 1.5;
+}

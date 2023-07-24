@@ -1,0 +1,38 @@
+<svg
+  width="300"
+  height="300"
+  viewBox="0 0 79.374998 79.374999"
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  aria-hidden="true"
+  role="img"
+>
+  <defs>
+    <linearGradient
+       id="linearGradient927">
+      <stop
+         style="stop-color:#dc24bd;stop-opacity:1;"
+         offset="0"
+         id="stop923" />
+      <stop
+         style="stop-color:#4ee3cf;stop-opacity:1;"
+         offset="1"
+         id="stop925" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient927"
+       id="linearGradient929"
+       x1="40.578213"
+       y1="0.3718538"
+       x2="39.649532"
+       y2="81.228851"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <circle
+    style="fill:none;stroke:url(#linearGradient929);stroke-width:13.0698;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
+    id="path898"
+    cx="39.799255"
+    cy="39.699184"
+    r="32.17078"
+  />
+</svg>
