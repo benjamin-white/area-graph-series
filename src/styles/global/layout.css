@@ -3,10 +3,8 @@ body {
 }
 
 .site-wrap {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 3rem;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
 }
 
 .container {

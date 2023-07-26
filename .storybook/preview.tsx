@@ -1,6 +1,6 @@
 import React from 'react'
 import type { Preview } from '@storybook/react'
-import PreviewDecorator from './PreviewDecorator'
+import StylesDecorator from './decorators/StylesDecorator'
 
 const preview: Preview = {
   parameters: {
@@ -12,11 +12,29 @@ const preview: Preview = {
       },
     },
   },
+  globalTypes: {
+    showGrid: {
+      description: 'Render 3d grid plane helper',
+      defaultValue: 'Show',
+      toolbar: {
+        title: '3d Plane',
+        items: ['Show', 'Hide'],
+      },
+    },
+    showAxes: {
+      description: 'Render 3d axes helper',
+      defaultValue: 'Show',
+      toolbar: {
+        title: '3d Axes',
+        items: ['Show', 'Hide'],
+      },
+    },
+  },
   decorators: [
     (Story) => (
-      <PreviewDecorator>
+      <StylesDecorator>
         <Story />
-      </PreviewDecorator>
+      </StylesDecorator>
     ),
   ],
 }

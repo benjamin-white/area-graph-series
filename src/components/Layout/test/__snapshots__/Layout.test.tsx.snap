@@ -4,10 +4,6 @@ exports[`Layout > renders a Layout component 1`] = `
 <div
   class="site-wrap"
 >
-  <div
-    class="container"
-  >
-    Lorem ipsum
-  </div>
+  Lorem ipsum
 </div>
 `;

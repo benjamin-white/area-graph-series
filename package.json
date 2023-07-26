@@ -25,11 +25,14 @@
     ]
   },
   "dependencies": {
+    "@react-three/fiber": "^8.13.5",
+    "@types/three": "^0.154.0",
     "danfojs": "1.1.1",
     "modern-normalize": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "seedrandom": "^3.0.5",
+    "three": "^0.154.0",
     "vite-plugin-pwa": "^0.16.4"
   },
   "devDependencies": {

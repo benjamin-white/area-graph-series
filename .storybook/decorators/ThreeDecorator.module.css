@@ -1,0 +1,5 @@
+.ThreeDecorator {
+  box-shadow: var(--drop-shadow);
+  height: 600px;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+}
