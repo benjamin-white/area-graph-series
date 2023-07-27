@@ -24,7 +24,8 @@
     /* import aliases */
     "paths": {
       "@/*": ["./src/components/*"],
-      "@asset/*": ["./src/assets/*"]
+      "@asset/*": ["./src/assets/*"],
+      "@sb/*": ["./.storybook/*"]
     }
   },
   "include": ["src/*.d.ts", "**/*.ts", "**/*.tsx"]

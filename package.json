@@ -25,6 +25,7 @@
     ]
   },
   "dependencies": {
+    "@react-three/drei": "^9.79.4",
     "@react-three/fiber": "^8.13.5",
     "@types/three": "^0.154.0",
     "danfojs": "1.1.1",
@@ -40,6 +41,7 @@
     "@commitlint/config-conventional": "^17.6.7",
     "@inquirer/input": "^1.2.5",
     "@playwright/test": "^1.36.1",
+    "@react-three/test-renderer": "^8.2.0",
     "@storybook/addon-essentials": "^7.1.0",
     "@storybook/addon-interactions": "^7.1.0",
     "@storybook/addon-links": "^7.1.0",

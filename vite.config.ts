@@ -17,6 +17,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src/components'),
       '@asset': path.resolve(__dirname, './src/assets'),
+      '@sb': path.resolve(__dirname, './.storybook'),
     },
   },
   plugins: [
