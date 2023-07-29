@@ -1,19 +1,9 @@
 import { readCSV } from 'danfojs'
 import europeanCountries from '../config/european-countries'
+import { GraphData } from '@/AreaGraph/types'
 
 const DEBUG = false
 const { log } = console
-
-export type GraphData = {
-  yearMin: number
-  yearMax: number
-  populationMin: number
-  populationMax: number
-  countries: {
-    name: string
-    data: { year: number; population: number }[]
-  }[]
-}
 
 const loadData = async (fileName: string) => {
   const df = await readCSV(`${window.location.origin}/${fileName}`)

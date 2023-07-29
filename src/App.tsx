@@ -1,6 +1,8 @@
 import Layout from '@/Layout'
 import { useEffect, useState } from 'react'
-import loadData, { GraphData } from './lib/loadData'
+import loadData from './lib/loadData'
+import AreaGraph from '@/AreaGraph'
+import type { GraphData } from '@/AreaGraph/types'
 
 const App = () => {
   const [data, setData] = useState<GraphData | null>(null)
@@ -15,9 +17,7 @@ const App = () => {
   }, [])
 
   return (
-    <Layout className={['text-center', 'justify-center']}>
-      {data ? 'Loaded' : 'Loading...'}
-    </Layout>
+    <Layout>{data !== null ? <AreaGraph data={data} /> : 'Loading...'}</Layout>
   )
 }
 
