@@ -1,7 +1,7 @@
-import type { GraphAxes } from './types'
+import type { GraphAxesProps } from './types'
 import Axis from './components/Axis'
 
-const GraphAxes = ({ axes }: { axes: GraphAxes }) => {
+const GraphAxes = ({ axes }: { axes: GraphAxesProps }) => {
   return (
     <>
       {axes.x && <Axis axis={{ ...axes.x, orientation: 'x' }} />}
