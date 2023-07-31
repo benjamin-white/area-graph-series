@@ -1,4 +1,4 @@
-import { Axis } from './GraphAxes'
+import { Axis } from './components/Axis'
 
 export type GraphAxes = {
   x?: Omit<Axis, 'orientation'>
