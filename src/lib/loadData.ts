@@ -1,6 +1,16 @@
 import { readCSV } from 'danfojs'
 import europeanCountries from '../config/european-countries'
-import { GraphData } from '@/AreaGraph/types'
+
+export type PopulationData = {
+  yearMin: number
+  yearMax: number
+  populationMin: number
+  populationMax: number
+  countries: {
+    name: string
+    data: { year: number; population: number }[]
+  }[]
+}
 
 const DEBUG = false
 const { log } = console
@@ -45,7 +55,7 @@ const loadData = async (fileName: string) => {
     log(grp.colDict)
   }
 
-  const data: GraphData = {
+  const data: PopulationData = {
     yearMin: Math.min(...(df.column('year').values as number[])),
     yearMax: Math.max(...(df.column('year').values as number[])),
     populationMin: Math.min(...(df.column('count').values as number[])),

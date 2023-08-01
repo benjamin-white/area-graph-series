@@ -46,6 +46,7 @@ specifiers:
   postcss: ^8.4.26
   postcss-nesting: ^12.0.0
   prettier: 3.0.0
+  radash: ^11.0.0
   react: ^18.2.0
   react-dom: ^18.2.0
   seedrandom: ^3.0.5
@@ -63,6 +64,7 @@ dependencies:
   '@types/three': 0.154.0
   danfojs: 1.1.1_seedrandom@3.0.5
   modern-normalize: 2.0.0
+  radash: 11.0.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   seedrandom: 3.0.5
@@ -8662,6 +8664,11 @@ packages:
     resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
     engines: {node: '>=8'}
     dev: true
+
+  /radash/11.0.0:
+    resolution: {integrity: sha512-CRWxTFTDff0IELGJ/zz58yY4BDgyI14qSM5OLNKbCItJrff7m7dXbVF0kWYVCXQtPb3SXIVhXvAImH6eT7VLSg==}
+    engines: {node: '>=14.18.0'}
+    dev: false
 
   /ramda/0.29.0:
     resolution: {integrity: sha512-BBea6L67bYLtdbOqfp8f58fPMqEwx0doL+pAi8TZyp2YWz8R9G8z9x75CZI8W+ftqhFHCpEX2cRnUUXK130iKA==}

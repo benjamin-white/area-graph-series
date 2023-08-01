@@ -1,3 +1,10 @@
+declare module 'react' {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  interface DOMAttributes<T> {
+    ['geometry']?: THREE.BufferGeometry<THREE.NormalBufferAttributes>
+  }
+}
+
 import { Axis } from './components/Axis'
 
 export type GraphAxesProps = {

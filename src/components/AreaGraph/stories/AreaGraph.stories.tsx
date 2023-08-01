@@ -1,17 +1,56 @@
 import * as THREE from 'three'
-import { useEffect, useState } from 'react'
-import { Canvas } from '@react-three/fiber'
-import Layout from '@/Layout'
-import AreaGraph from '@/AreaGraph'
-import CameraController from '@/CameraContoller'
-import loadData from './lib/loadData'
-import processData from './lib/processData'
-import { AreaGraphProps } from '@/AreaGraph/types'
+import type { Meta } from '@storybook/react'
+import ThreeDecorator from '@sb/decorators/ThreeDecorator'
+import AreaGraph from '../'
 
 const MAGNITUDE_X = 20
 const MAGNITUDE_Y = 10
 const MAGNITUDE_Z = -15
 
+const labels = {
+  x: ['Berlin', 'London', 'Paris', 'Brussels', 'Stockholm', 'Rome', 'Athens'],
+  y: ['5,000', '6,000', '7,000', '8,000', '9,000', '10,000'],
+  z: [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ],
+}
+const data = new Array(7).fill([
+  [1, 5_000],
+  [1, 7_000],
+  [2, 7_600],
+  [3, 8_000],
+  [4, 9_000],
+  [5, 8_500],
+  [6, 8_000],
+  [7, 7_000],
+  [8, 7_000],
+  [9, 8_500],
+  [10, 9_500],
+  [11, 10_000],
+  [12, 9_000],
+  [12, 5_000],
+])
+const axesRange = {
+  x: {
+    min: 1,
+    max: 12,
+  },
+  y: {
+    min: 5_000,
+    max: 10_000,
+  },
+}
 const config = {
   sliceColor: '#5b90a3',
   sliceWidth: 0.12,
@@ -61,35 +100,23 @@ const config = {
   ],
 }
 
-const App = () => {
-  const [data, setData] = useState<Omit<AreaGraphProps, 'config'> | null>(null)
-
-  useEffect(() => {
-    const load = async () => {
-      setData(processData(await loadData('populations.csv')))
-    }
-    void load()
-  }, [])
-
-  return (
-    <Layout>
-      {data !== null ? (
-        <Canvas>
-          <CameraController />
-          <ambientLight />
-          <pointLight position={[10, 10, 10]} />
-          <AreaGraph
-            labels={data.labels}
-            data={data.data}
-            axesRange={data.axesRange}
-            config={config}
-          />
-        </Canvas>
-      ) : (
-        'Loading...'
-      )}
-    </Layout>
-  )
+const meta: Meta<typeof AreaGraph> = {
+  component: AreaGraph,
+  title: 'Components/AreaGraph',
+  args: {
+    labels,
+    data,
+    axesRange,
+    config,
+  },
+  decorators: [
+    (Story, { globals }) => (
+      <ThreeDecorator globals={globals}>
+        <Story />
+      </ThreeDecorator>
+    ),
+  ],
 }
 
-export default App
+export default meta
+export const Default = {}
