@@ -10,6 +10,7 @@ export type Axis = {
     end: Vec3
   }
   markers: {
+    withOffset?: boolean
     labels: string[]
     direction: Vec3
     anchor: {
@@ -33,9 +34,12 @@ const getMarkerLocation = (
   initialPosition: Vec3,
   direction: -1 | 1,
   orientation: Axis['orientation'],
+  withOffset?: boolean,
 ) => {
   const location: Vec3 = [...initialPosition]
-  location[axisToIndex[orientation]] = step * (markerIndex + 1) * direction
+  location[axisToIndex[orientation]] =
+    step * markerIndex * direction + (withOffset ? step : 0)
+
   return location
 }
 
@@ -50,8 +54,10 @@ const Axis = ({ axis: { line, markers, orientation } }: { axis: Axis }) => {
     [points],
   )
 
-  const labelStep = points[0].distanceTo(points[1]) / markers.labels.length || 1
   const directionSign = line.end[axisToIndex[orientation]] < 0 ? -1 : 1
+  const axisLength = points[0].distanceTo(points[1])
+  const labelStep =
+    axisLength / (markers.labels.length - (markers.withOffset ? 0 : 1)) || 1
 
   return (
     <>
@@ -72,6 +78,7 @@ const Axis = ({ axis: { line, markers, orientation } }: { axis: Axis }) => {
             [...line.start],
             directionSign,
             orientation,
+            markers.withOffset,
           )}
           text={label}
           direction={markers.direction}

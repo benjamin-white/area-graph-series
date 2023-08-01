@@ -22,6 +22,7 @@ const meta: Meta<typeof GraphAxes> = {
           },
           labelRotation: new THREE.Euler(0, Math.PI * 0.5, 0),
           labelOffset: new THREE.Vector3(1, 1.1, 1),
+          withOffset: true,
         },
       },
       y: {
