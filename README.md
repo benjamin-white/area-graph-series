@@ -1,15 +1,16 @@
-# **_Boilerplate_**
+# **_Population Graph Series_**
 
-### Currently includes:
+A small experiment rendering population change over time for European countries as a 3d series. CSV data is loaded and prepared using `danfa.js` and then rendered as objects using the `React Three Fiber` wrapper around `THREEjs`. Prototyping of the individual scene components was done in `Storybook`.
 
-- Commit hook by `husky` to run tests and `ESLint`
-- Commit hook by `husky` to run `commitlint` enforcing Conventional Commits
-- Storybook
-- Preliminary PWA support through `vite-plugin-pwa`, though more setup of the ServiceWorker is needed for offline, caching, etc.
-- `Playwright` for running feature tests
-- A scaffold script for quickly creating a component's folder structure, ie. `npm run scaffold`
-- `React Testing Library` and `Jest` matchers for running unit tests
-- CSS Modules (and CSS nesting via `postcss-nesting`)
-- `Typescript`, `Prettier` and `editorconfig` for a better Development Experience
-- `vite` and `vitest` for fast, lower config local development and test runs
-- Uses `pnpm` for package management for improved performance
+![Storybook view](./screenshot-sb.png)
+
+The result is not immensely practical, but was interesting as an exploration of how data can be displayed on three axes.
+
+![App view](./screenshot-app.png)
+
+## **_Future Features_**
+
+- Add test coverage. Testing of the scene graph should be easier with the help of `@react-three/test-renderer`.
+- Use `bezierTo` rather than `lineTo` for a smoother visual change over time?
+- Explore if colour could enhance meaning, eg. could population density be a spectrum over the `y` axis?
+- One of the biggest problems is that it is hard to read the data. Consider adding interaction states that allow 1). visually highlighting a country and 2). overlaying a projection of marker lines in the graph's bounding box.
